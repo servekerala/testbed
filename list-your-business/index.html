@@ -104,40 +104,59 @@
     <form class="listing-form" action="#" method="post">
 
       <!-- BUSINESS DETAILS -->
-      <h3>Business Details</h3>
+      
+     <section class="listing-section">
+  <div class="listing-card">
 
-      <input type="text" name="business_name" placeholder="Business Name *" required />
-      <input type="text" name="category" placeholder="Category (e.g. Solar, Medical, Tailor) *" required />
-      <input type="tel" name="phone" placeholder="Phone Number *" required />
-      <input type="tel" name="whatsapp" placeholder="WhatsApp Number" />
-      <input type="url" name="website" placeholder="Website (optional)" />
+    <h2 class="listing-title">Request a Business Listing</h2>
+    <p class="listing-subtitle">
+      100% free for 1 year • Manual review • No commission
+    </p>
 
-      <!-- LOCATION -->
-      <h3>Location</h3>
+    <form class="listing-form">
+      
+      <div class="form-group">
+        <h3>Business Details</h3>
+        <div class="form-grid">
+          <input type="text" name="business_name" placeholder="Business Name *" required>
+          <input type="text" name="category" placeholder="Category (e.g. Solar, Medical) *" required>
+          <input type="tel" name="phone" placeholder="Phone Number *" required>
+          <input type="tel" name="whatsapp" placeholder="WhatsApp Number">
+          <input type="url" name="website" placeholder="Website (optional)">
+        </div>
+      </div>
 
-      <input type="text" name="district" placeholder="District *" required />
-      <input type="text" name="city" placeholder="City / Town *" required />
-      <input type="text" name="area" placeholder="Area / Locality *" required />
+      <div class="form-group">
+        <h3>Location</h3>
+        <div class="form-grid">
+          <input type="text" name="district" placeholder="District *" required>
+          <input type="text" name="city" placeholder="City / Town *" required>
+          <input type="text" name="area" placeholder="Area / Locality *" required>
+        </div>
+      </div>
 
-      <!-- SERVICES -->
-      <h3>Services / Products</h3>
-      <textarea name="services" rows="3" placeholder="List main services or products (short)"></textarea>
+      <div class="form-group">
+        <h3>Services / Products</h3>
+        <textarea name="services" rows="4" placeholder="List main services or products (short)"></textarea>
+      </div>
 
-      <!-- IMAGES -->
-      <h3>Images (Optional)</h3>
-      <input type="file" name="images" accept="image/*" multiple />
+      <div class="form-group">
+        <h3>Images (Optional)</h3>
+        <input type="file" name="images" multiple>
+      </div>
 
-      <!-- CONFIRMATION -->
-      <label style="display:block; margin:12px 0;">
-        <input type="checkbox" required />
-        I confirm that the above information is correct to the best of my knowledge.
+      <label class="form-check">
+        <input type="checkbox" required>
+        I confirm that the above information is correct.
       </label>
 
-      <button type="submit" class="btn btn-primary">Submit Request</button>
+      <button type="submit" class="btn btn-primary btn-full">
+        Submit Request
+      </button>
 
-      <p style="font-size:0.85rem; margin-top:10px; color:#555;">
-        Note: Submitting this form does not guarantee automatic publication.
-        All listings are reviewed manually to ensure quality.
+      <p class="form-note">
+        Submitting this form does not guarantee automatic publication.
+        All listings are reviewed manually.
       </p>
 
     </form>
