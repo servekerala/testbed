@@ -349,3 +349,62 @@ body {
     font-size: 1.6rem;
   }
 }
+/* ===============================
+   ADMIN LOGIN PAGE
+================================ */
+.admin-login-section {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f7f5;
+  padding: 20px;
+}
+
+.admin-login-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 36px 28px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.admin-title {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+  color: #1b7f3b;
+}
+
+.admin-subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.admin-login-form input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.admin-login-form input:focus {
+  outline: none;
+  border-color: #1b7f3b;
+}
+
+.admin-login-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.admin-note {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 16px;
+}
