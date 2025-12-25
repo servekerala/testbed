@@ -408,3 +408,91 @@ body {
   color: #777;
   margin-top: 16px;
 }
+/* ===============================
+   LIST YOUR BUSINESS FORM
+================================ */
+.listing-section {
+  background: #f4f7f5;
+  padding: 60px 16px;
+}
+
+.listing-card {
+  background: #ffffff;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 32px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.listing-title {
+  text-align: center;
+  font-size: 1.9rem;
+  color: #1b7f3b;
+  margin-bottom: 6px;
+}
+
+.listing-subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.form-group {
+  margin-bottom: 32px;
+}
+
+.form-group h3 {
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  color: #222;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.listing-form input,
+.listing-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.listing-form input:focus,
+.listing-form textarea:focus {
+  outline: none;
+  border-color: #1b7f3b;
+}
+
+.form-check {
+  display: block;
+  margin: 18px 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.btn-full {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+}
+
+.form-note {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+  margin-top: 14px;
+}
+
+/* Mobile spacing fix */
+@media (max-width: 600px) {
+  .listing-card {
+    padding: 28px 20px;
+  }
+}
