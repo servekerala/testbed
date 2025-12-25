@@ -1,0 +1,351 @@
+/* ===============================
+   GLOBAL RESET & BASE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+  background-color: #ffffff;
+}
+
+/* ===============================
+   GLOBAL CONTAINERS
+================================ */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.section-alt {
+  background: #f7f9fb;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo a {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1b7f3b;
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  gap: 18px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.main-nav .btn {
+  padding: 8px 14px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===============================
+   HERO
+================================ */
+.hero {
+  background: linear-gradient(135deg, #e9f7ef, #ffffff);
+  padding: 64px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: #555;
+  margin-bottom: 28px;
+}
+
+/* ===============================
+   SEARCH BOX
+================================ */
+.search-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.search-box select,
+.search-box button {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.btn-search {
+  background: #1b7f3b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: #1b7f3b;
+  color: #fff;
+}
+
+.btn-outline {
+  border: 1px solid #1b7f3b;
+  color: #1b7f3b;
+  background: #fff;
+}
+
+.btn-call {
+  background: #0b5ed7;
+  color: #fff;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+/* ===============================
+   CATEGORY GRID
+================================ */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.category-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ===============================
+   CARD GRID (BUSINESS / EVENT / OFFER)
+================================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.business-card,
+.event-card,
+.offer-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.business-card h3,
+.event-card h3,
+.offer-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.badge {
+  display: inline-block;
+  background: #eef6f0;
+  color: #1b7f3b;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 6px 0 12px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* ===============================
+   DISTRICTS
+================================ */
+.district-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.district-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 28px;
+  text-align: center;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* ===============================
+   FEATURES LIST
+================================ */
+.features-list {
+  list-style: none;
+  max-width: 600px;
+  margin: auto;
+}
+
+.features-list li {
+  padding: 8px 0;
+  font-size: 0.95rem;
+}
+
+/* ===============================
+   CTA
+================================ */
+.cta {
+  background: #1b7f3b;
+  color: #ffffff;
+  text-align: center;
+  padding: 48px 0;
+}
+
+.cta h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  margin-bottom: 18px;
+}
+
+/* ===============================
+   SEO TEXT
+================================ */
+.seo-text p {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+.site-footer {
+  background: #111;
+  color: #ccc;
+  padding: 32px 0;
+}
+
+.footer-inner {
+  text-align: center;
+}
+
+.footer-links {
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin: 0 10px;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.footer-note {
+  font-size: 0.8rem;
+}
+
+/* ===============================
+   MOBILE NAV
+================================ */
+@media (max-width: 768px) {
+  .main-nav {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    width: 220px;
+    padding: 16px;
+    border-left: 1px solid #e5e5e5;
+    display: none;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+}
