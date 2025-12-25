@@ -181,3 +181,36 @@
 
 </body>
 </html>
+<script type="module">
+  import { db } from "/assets/js/firebase-config.js";
+  import { collection, addDoc, serverTimestamp }
+    from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+  const form = document.querySelector(".listing-form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const data = {
+      businessName: form.business_name.value,
+      category: form.category.value,
+      phone: form.phone.value,
+      whatsapp: form.whatsapp.value || "",
+      website: form.website.value || "",
+      district: form.district.value,
+      city: form.city.value,
+      area: form.area.value,
+      services: form.services.value || "",
+      status: "pending",
+      createdAt: serverTimestamp()
+    };
+
+    try {
+      await addDoc(collection(db, "listings_requests"), data);
+      alert("Your listing request has been submitted for review.");
+      form.reset();
+    } catch (err) {
+      alert("Submission failed. Try again later.");
+    }
+  });
+</script>
