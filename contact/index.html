@@ -86,35 +86,43 @@
 </section>
 
 <!-- ================= CONTACT FORM ================= -->
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Send Us a Message</h2>
+<section class="contact-section">
+  <div class="contact-card">
 
-    <form class="contact-form" action="#" method="post">
+    <h2 class="contact-title">Send Us a Message</h2>
+    <p class="contact-subtitle">
+      Have a question or need support? Fill the form below.
+    </p>
 
-      <input type="text" name="name" placeholder="Your Name *" required />
-      <input type="email" name="email" placeholder="Your Email *" required />
-      <input type="tel" name="phone" placeholder="Phone Number (optional)" />
+    <form class="contact-form">
 
-      <select name="subject" required>
-        <option value="">Select Subject *</option>
-        <option>Business Listing Enquiry</option>
-        <option>Event Submission</option>
-        <option>Offer Submission</option>
-        <option>Support / Correction</option>
-        <option>General Enquiry</option>
-      </select>
+      <div class="form-grid">
+        <input type="text" name="name" placeholder="Your Name *" required>
+        <input type="email" name="email" placeholder="Your Email *" required>
+        <input type="tel" name="phone" placeholder="Phone Number (optional)">
+        <select name="subject" required>
+          <option value="">Select Subject *</option>
+          <option>Business Listing Enquiry</option>
+          <option>Event Submission</option>
+          <option>Offer Submission</option>
+          <option>Support / Correction</option>
+          <option>General Enquiry</option>
+        </select>
+      </div>
 
-      <textarea name="message" rows="4" placeholder="Your Message *" required></textarea>
+      <textarea name="message" rows="5" placeholder="Your Message *" required></textarea>
 
-      <button type="submit" class="btn btn-primary">Send Message</button>
+      <button type="submit" class="btn btn-primary btn-full">
+        Send Message
+      </button>
 
-      <p style="font-size:0.85rem; margin-top:10px; color:#555;">
-        Note: We do not sell leads or charge commission.  
+      <p class="form-note">
+        We do not sell leads or charge commission.  
         Messages are reviewed manually to ensure proper support.
       </p>
 
     </form>
+
   </div>
 </section>
 
