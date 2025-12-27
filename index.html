@@ -1,117 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ServeKerala.in – Local Services, Businesses & Events in Kerala</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>ServeKerala.in – Find Trusted Local Services Near You</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <meta name="description" content="ServeKerala.in helps you find trusted local services, businesses, events and offers across Kerala districts. Add your business for free.">
-  <meta name="keywords" content="kerala services, local businesses kerala, events in kerala, district services kerala">
-  <meta name="author" content="ServeKerala.in">
+  <meta name="description" content="ServeKerala helps you find trusted local services, businesses, events and offers across Kerala. No commission. Direct contact." />
+  <meta name="keywords" content="local services kerala, business directory kerala, events kerala, offers kerala" />
+  <meta name="author" content="ServeKerala.in" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
 
   <!-- Google Tag Manager -->
   <script>
-  (function(w,d,s,l,i){
-    w[l]=w[l]||[];
-    w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-    var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),
-        dl=l!='dataLayer'?'&l='+l:'';
-    j.async=true;
-    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-    f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5Q3X8BNF');
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5Q3X8BNF');
   </script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Global CSS -->
-  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
 <body>
 
-<!-- Google Tag Manager (noscript) -->
 <noscript>
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q3X8BNF"
   height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
+    <div class="logo"><a href="/">ServeKerala</a></div>
 
-    <div class="logo">
-      <a href="/">ServeKerala</a>
-    </div>
-
-    <!-- Desktop Menu -->
-    <nav class="main-nav desktop-only">
+    <nav class="main-nav" id="mainNav">
       <a href="/services/">Services</a>
       <a href="/districts/">Districts</a>
       <a href="/businesses/">Businesses</a>
       <a href="/offers/">Offers</a>
       <a href="/events/">Events</a>
-      <a href="/list-your-business/" class="btn-primary">Add Listing</a>
+      <a href="/list-your-business/" class="btn btn-primary">Add Listing</a>
     </nav>
 
-    <!-- Mobile Menu Toggle -->
-    <button class="menu-toggle mobile-only" id="menuToggle">☰ Menu</button>
+    <button class="menu-toggle" id="menuToggle">☰</button>
   </div>
-
-  <!-- Mobile Menu (LOCKED FINAL) -->
-  <nav class="mobile-menu" id="mobileMenu">
-    <a href="/services/">Services</a>
-    <a href="/districts/">Districts</a>
-    <a href="/businesses/">Businesses</a>
-    <a href="/offers/">Offers</a>
-    <a href="/events/">Events</a>
-    <a href="/list-your-business/" class="highlight">Add Listing</a>
-  </nav>
 </header>
 
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="container hero-content">
-    <h1>Kerala’s Local Services & Business Directory</h1>
-    <p>Find trusted services, businesses, events and offers across all districts of Kerala.</p>
-
-    <div class="hero-actions">
-      <a href="/services/" class="btn-primary">Explore Services</a>
-      <a href="/list-your-business/" class="btn-outline">Add Your Business</a>
-    </div>
+    <h1>Find Trusted Local Services Near You</h1>
+    <p>No commission. Direct call & WhatsApp.</p>
   </div>
 </section>
 
-<!-- ================= SERVICES ================= -->
-<section class="section">
+<!-- ================= FEATURED BUSINESSES ================= -->
+<section class="section section-alt">
   <div class="container">
-    <h2 class="section-title">Popular Services</h2>
-    <div class="grid services-grid">
-      <a href="/services/solar/" class="card">Solar Installation</a>
-      <a href="/services/plumber/" class="card">Plumber</a>
-      <a href="/services/electrician/" class="card">Electrician</a>
-      <a href="/services/ac-service/" class="card">AC Service</a>
-      <a href="/services/home-cleaning/" class="card">Home Cleaning</a>
-      <a href="/services/packers-movers/" class="card">Packers & Movers</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= DISTRICTS ================= -->
-<section class="section bg-light">
-  <div class="container">
-    <h2 class="section-title">Browse by District</h2>
-    <div class="grid district-grid">
-      <a href="/districts/trivandrum/">Trivandrum</a>
-      <a href="/districts/kollam/">Kollam</a>
-      <a href="/districts/pathanamthitta/">Pathanamthitta</a>
-      <a href="/districts/alappuzha/">Alappuzha</a>
-      <a href="/districts/kottayam/">Kottayam</a>
-      <a href="/districts/ernakulam/">Ernakulam</a>
-      <a href="/districts/thrissur/">Thrissur</a>
-      <a href="/districts/calicut/">Calicut</a>
+    <h2 class="section-title">Featured Local Businesses</h2>
+    <div class="card-grid" id="featuredBusinesses">
+      <!-- Loaded from Firestore -->
     </div>
   </div>
 </section>
@@ -120,68 +71,33 @@
 <section class="section">
   <div class="container">
     <h2 class="section-title">Upcoming Events</h2>
-    <p class="section-subtitle">Discover what’s happening near you</p>
-
-    <div id="eventsContainer" class="grid events-grid">
-      <!-- Firestore events will load here later -->
-      <div class="card placeholder">Events loading soon…</div>
-    </div>
-
-    <div class="center">
-      <a href="/events/" class="btn-outline">View All Events</a>
+    <div class="card-grid" id="homeEvents">
+      <!-- Loaded from Firestore -->
     </div>
   </div>
 </section>
 
-<!-- ================= CTA ================= -->
-<section class="cta">
+<!-- ================= OFFERS ================= -->
+<section class="section section-alt">
   <div class="container">
-    <h2>Own a Business?</h2>
-    <p>Get discovered by customers across Kerala.</p>
-    <a href="/list-your-business/" class="btn-primary">Add Listing – Free</a>
+    <h2 class="section-title">Local Offers</h2>
+    <div class="card-grid" id="homeOffers">
+      <!-- Loaded from Firestore -->
+    </div>
   </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-  <div class="container footer-grid">
-
-    <div>
-      <h4>ServeKerala</h4>
-      <p>Kerala’s local services & business discovery platform.</p>
-    </div>
-
-    <div>
-      <h4>Quick Links</h4>
-      <a href="/services/">Services</a>
-      <a href="/districts/">Districts</a>
-      <a href="/businesses/">Businesses</a>
-      <a href="/events/">Events</a>
-    </div>
-
-    <div>
-      <h4>Support</h4>
-      <a href="/contact/">Contact</a>
-      <a href="/privacy-policy/">Privacy Policy</a>
-      <a href="/terms/">Terms & Conditions</a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2025 ServeKerala.in
+  <div class="container footer-inner">
+    <p>© ServeKerala.in – Kerala Connect</p>
   </div>
 </footer>
 
-<!-- Global JS -->
+<!-- Firebase + Dynamic Data -->
+<script src="/assets/js/firebase-init.js"></script>
+<script src="/assets/js/home-data.js"></script>
 <script src="/assets/js/main.js"></script>
-
-<script>
-  // Mobile menu toggle
-  document.getElementById('menuToggle').addEventListener('click', function () {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  });
-</script>
 
 </body>
 </html>
