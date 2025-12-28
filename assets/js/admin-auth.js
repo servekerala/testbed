@@ -31,7 +31,7 @@ if (loginForm) {
       await signInWithEmailAndPassword(auth, email, password);
 
       // ✅ Login successful
-      window.location.href = "/admin/dashboard.html";
+      window.location.href = "/admin-login/dashboard.html";
 
     } catch (error) {
       console.error("Admin login failed:", error.code);
