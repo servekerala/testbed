@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard | ServeKerala.in</title>
+
+  <!-- Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="author" content="ServeKerala.in" />
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <link rel="icon" href="/favicon.ico" />
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <a href="/">ServeKerala</a>
+    </div>
+
+    <nav class="main-nav">
+      <a href="/admin/dashboard.html" class="active">Dashboard</a>
+      <a href="/" target="_blank">View Site</a>
+      <a href="#" id="logoutBtn" class="admin-link">Logout</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </div>
+</header>
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="hero hero-small">
+  <div class="container hero-content">
+    <h1>Admin Dashboard</h1>
+    <p>Manage listings, approvals & content</p>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3 id="pendingCount">0</h3>
+        <p>Pending Listings</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="approvedCount">0</h3>
+        <p>Approved Listings</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="rejectedCount">0</h3>
+        <p>Rejected</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PENDING LISTINGS ================= -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Pending Listing Requests</h2>
+
+    <div id="pendingListings" class="admin-card-grid">
+
+      <!-- SAMPLE CARD (Firestore will replace this) -->
+      <div class="admin-listing-card">
+        <h3>Sample Business Name</h3>
+        <p><strong>Category:</strong> Solar Installer</p>
+        <p><strong>Location:</strong> Changanacherry</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+
+        <div class="admin-actions">
+          <button class="btn btn-success">Approve</button>
+          <button class="btn btn-danger">Reject</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPROVED LISTINGS ================= -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Approved Listings</h2>
+
+    <div id="approvedListings" class="admin-card-grid">
+      <p class="muted-text">Approved listings will appear here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-note">© ServeKerala.in – Admin Panel</p>
+  </div>
+</footer>
+
+<!-- ================= NORMAL JS ================= -->
+<script src="/assets/js/main.js"></script>
+
+<!-- ================= FIREBASE ================= -->
+<script type="module" src="/assets/js/firebase-init.js"></script>
+
+<!-- ================= AUTH GUARD ================= -->
+<script type="module" src="/assets/js/admin-guard.js"></script>
+
+<!-- ================= DASHBOARD LOGIC (NEXT STEP) ================= -->
+<script type="module" src="/assets/js/admin-dashboard.js"></script>
+
+</body>
+</html>
