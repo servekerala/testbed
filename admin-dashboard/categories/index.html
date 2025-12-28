@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin – Category Manager | ServeKerala</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+
+<body>
+
+<!-- 🔒 Admin Guard -->
+<script type="module" src="/assets/js/admin-guard.js"></script>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">ServeKerala Admin</div>
+    <nav class="main-nav">
+      <a href="/admin-dashboard/">Dashboard</a>
+      <a href="/admin-dashboard/categories/" class="active">Categories</a>
+      <a href="/admin-dashboard/listings/">Listings</a>
+      <a href="/admin-dashboard/events/">Events</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+
+    <h1>Category Manager</h1>
+
+    <!-- ADD CATEGORY -->
+    <div class="admin-card">
+      <h3>Add New Category</h3>
+
+      <form id="categoryForm" class="form-grid">
+        <input type="text" id="categoryName" placeholder="Category Name *" required />
+        <button class="btn btn-primary" type="submit">Add Category</button>
+      </form>
+    </div>
+
+    <!-- CATEGORY LIST -->
+    <div class="admin-card">
+      <h3>Existing Categories</h3>
+
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Slug</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="categoryTable"></tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- Scripts -->
+<script type="module">
+  import { db } from "/assets/js/firebase-init.js";
+  import {
+    collection,
+    addDoc,
+    getDocs,
+    updateDoc,
+    doc,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+  const form = document.getElementById("categoryForm");
+  const nameInput = document.getElementById("categoryName");
+  const table = document.getElementById("categoryTable");
+
+  function slugify(text) {
+    return text
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9]+/g, "-");
+  }
+
+  async function loadCategories() {
+    table.innerHTML = "";
+    const snap = await getDocs(collection(db, "categories"));
+
+    snap.forEach(docSnap => {
+      const d = docSnap.data();
+
+      table.innerHTML += `
+        <tr>
+          <td>${d.name}</td>
+          <td>${d.slug}</td>
+          <td>${d.active ? "Active" : "Disabled"}</td>
+          <td>
+            <button class="btn btn-sm"
+              onclick="toggleCategory('${docSnap.id}', ${d.active})">
+              ${d.active ? "Disable" : "Enable"}
+            </button>
+          </td>
+        </tr>
+      `;
+    });
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = nameInput.value.trim();
+    if (!name) return;
+
+    await addDoc(collection(db, "categories"), {
+      name,
+      slug: slugify(name),
+      active: true,
+      createdAt: serverTimestamp()
+    });
+
+    nameInput.value = "";
+    loadCategories();
+  });
+
+  window.toggleCategory = async (id, current) => {
+    await updateDoc(doc(db, "categories", id), {
+      active: !current
+    });
+    loadCategories();
+  };
+
+  loadCategories();
+</script>
+
+</body>
+</html>
