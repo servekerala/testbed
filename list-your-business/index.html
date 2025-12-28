@@ -8,12 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <meta name="description" content="List your local business on ServeKerala.in for free. Get a business page, direct calls and WhatsApp leads. No commission. Manual review." />
-  <meta name="keywords" content="list business kerala, free business listing kerala, add local business kerala" />
+  <meta name="description" content="List your local business on ServeKerala.in for free. Get direct calls and WhatsApp leads. No commission. Manual review." />
+  <meta name="keywords" content="list business kerala, free business listing kerala" />
   <meta name="author" content="ServeKerala.in" />
 
-  <!-- Global CSS -->
   <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" href="/favicon.ico" />
 
   <!-- Google Tag Manager -->
   <script>
@@ -23,26 +23,19 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5Q3X8BNF');
   </script>
-  <!-- End Google Tag Manager -->
-
-  <link rel="icon" href="/favicon.ico" />
 </head>
 
 <body>
 
-<!-- Google Tag Manager (noscript) -->
 <noscript>
   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q3X8BNF"
   height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
-    <div class="logo">
-      <a href="/">ServeKerala</a>
-    </div>
+    <div class="logo"><a href="/">ServeKerala</a></div>
 
     <nav class="main-nav" id="mainNav">
       <a href="/">Home</a>
@@ -53,97 +46,61 @@
       <a href="/districts/">Districts</a>
       <a href="/list-your-business/" class="active btn btn-primary">Add Listing</a>
       <a href="/contact/">Contact</a>
-      <a href="/admin-login/" class="admin-link">Login</a>
     </nav>
 
     <button class="menu-toggle" id="menuToggle">☰</button>
   </div>
 </header>
 
-<!-- ================= PAGE HEADER ================= -->
+<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="container hero-content">
-    <h1>List Your Business on ServeKerala</h1>
-    <p>100% free listing for 1 year • No commission • Direct customer contact</p>
+    <h1>Request a Business Listing</h1>
+    <p>100% free for 1 year • Manual review • No commission</p>
   </div>
 </section>
 
-<!-- ================= HOW IT WORKS ================= -->
+<!-- ================= FORM ================= -->
 <section class="section">
   <div class="container">
-    <h2 class="section-title">How Listing Works</h2>
 
-    <ul class="features-list">
-      <li>📝 Submit your business details using the form below</li>
-      <li>🔍 Our team manually reviews the information</li>
-      <li>✅ Approved listings are published on ServeKerala</li>
-      <li>📞 Customers contact you directly via Call or WhatsApp</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ================= FREE PROMISE ================= -->
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Our Free Listing Promise</h2>
-
-    <ul class="features-list">
-      <li>✅ 100% free for 1 year</li>
-      <li>✅ No commission on customer deals</li>
-      <li>✅ No forced upgrades</li>
-      <li>✅ No middleman involvement</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ================= LISTING FORM ================= -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Request a Business Listing</h2>
-
-    <form class="listing-form" action="#" method="post">
+    <form class="listing-form" id="listingForm">
 
       <!-- BUSINESS DETAILS -->
-      
-     <section class="listing-section">
-  <div class="listing-card">
+      <h3>Business Details</h3>
+      <div class="form-grid">
+        <input type="text" name="businessName" placeholder="Business Name *" required>
 
-    <h2 class="listing-title">Request a Business Listing</h2>
-    <p class="listing-subtitle">
-      100% free for 1 year • Manual review • No commission
-    </p>
+        <!-- CATEGORY DROPDOWN -->
+        <select id="categorySelect" required>
+          <option value="">Select Category *</option>
+        </select>
 
-    <form class="listing-form">
-      
-      <div class="form-group">
-        <h3>Business Details</h3>
-        <div class="form-grid">
-          <input type="text" name="business_name" placeholder="Business Name *" required>
-          <input type="text" name="category" placeholder="Category (e.g. Solar, Medical) *" required>
-          <input type="tel" name="phone" placeholder="Phone Number *" required>
-          <input type="tel" name="whatsapp" placeholder="WhatsApp Number">
-          <input type="url" name="website" placeholder="Website (optional)">
-        </div>
+        <input type="tel" name="phone" placeholder="Phone Number *" required>
+        <input type="tel" name="whatsapp" placeholder="WhatsApp Number">
+        <input type="url" name="website" placeholder="Website (optional)">
       </div>
 
-      <div class="form-group">
-        <h3>Location</h3>
-        <div class="form-grid">
-          <input type="text" name="district" placeholder="District *" required>
-          <input type="text" name="city" placeholder="City / Town *" required>
-          <input type="text" name="area" placeholder="Area / Locality *" required>
-        </div>
+      <!-- LOCATION -->
+      <h3>Location</h3>
+      <div class="form-grid">
+        <select id="districtSelect" required>
+          <option value="">Select District *</option>
+        </select>
+
+        <select id="citySelect" disabled required>
+          <option value="">Select City / Town *</option>
+        </select>
+
+        <select id="areaSelect" disabled required>
+          <option value="">Select Area / Locality *</option>
+        </select>
       </div>
 
-      <div class="form-group">
-        <h3>Services / Products</h3>
-        <textarea name="services" rows="4" placeholder="List main services or products (short)"></textarea>
-      </div>
-
-      <div class="form-group">
-        <h3>Images (Optional)</h3>
-        <input type="file" name="images" multiple>
-      </div>
+      <!-- SERVICES -->
+      <h3>Services / Products</h3>
+      <textarea name="services" rows="4"
+        placeholder="List main services or products (short)"></textarea>
 
       <label class="form-check">
         <input type="checkbox" required>
@@ -155,81 +112,67 @@
       </button>
 
       <p class="form-note">
-        Submitting this form does not guarantee automatic publication.
-        All listings are reviewed manually.
+        All listings are manually reviewed before publishing.
       </p>
-
     </form>
-  </div>
-</section>
 
-<!-- ================= TRUST NOTE ================= -->
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Why Businesses Trust ServeKerala</h2>
-
-    <ul class="features-list">
-      <li>✔️ Clean, spam-free directory</li>
-      <li>✔️ Real local customers</li>
-      <li>✔️ Transparent click tracking</li>
-      <li>✔️ Community-focused platform</li>
-    </ul>
   </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div class="footer-links">
-      <a href="/about/">About</a>
-      <a href="/how-it-works/">How It Works</a>
-      <a href="/list-your-business/">List Your Business</a>
-      <a href="/events/">Events</a>
-      <a href="/offers/">Offers</a>
-      <a href="/districts/">Districts</a>
-      <a href="/privacy-policy/">Privacy Policy</a>
-      <a href="/terms-and-conditions/">Terms & Conditions</a>
-    </div>
-
     <p class="footer-note">© ServeKerala.in – Kerala Connect</p>
   </div>
 </footer>
 
-<!-- ================= GLOBAL JS ================= -->
-<script src="/assets/js/main.js"></script>
+<!-- ================= SCRIPTS ================= -->
+<script type="module" src="/assets/js/firebase-init.js"></script>
+<script type="module" src="/assets/js/dropdown-loader.js"></script>
 
-</body>
-</html>
 <script type="module">
-  import { db } from "/assets/js/firebase-config.js";
+  import { db } from "/assets/js/firebase-init.js";
   import { collection, addDoc, serverTimestamp }
-    from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+    from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
 
-  const form = document.querySelector(".listing-form");
+  const form = document.getElementById("listingForm");
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const data = {
-      businessName: form.business_name.value,
-      category: form.category.value,
+      businessName: form.businessName.value,
       phone: form.phone.value,
       whatsapp: form.whatsapp.value || "",
       website: form.website.value || "",
-      district: form.district.value,
-      city: form.city.value,
-      area: form.area.value,
       services: form.services.value || "",
+
+      categoryId: categorySelect.value,
+      categoryName: categorySelect.options[categorySelect.selectedIndex].text,
+
+      districtId: districtSelect.value,
+      districtName: districtSelect.options[districtSelect.selectedIndex].text,
+
+      cityId: citySelect.value,
+      cityName: citySelect.options[citySelect.selectedIndex].text,
+
+      areaId: areaSelect.value,
+      areaName: areaSelect.options[areaSelect.selectedIndex].text,
+
       status: "pending",
       createdAt: serverTimestamp()
     };
 
     try {
-      await addDoc(collection(db, "listings_requests"), data);
-      alert("Your listing request has been submitted for review.");
+      await addDoc(collection(db, "listing_requests"), data);
+      alert("✅ Listing request submitted successfully.");
       form.reset();
     } catch (err) {
-      alert("Submission failed. Try again later.");
+      alert("❌ Submission failed. Please try again.");
+      console.error(err);
     }
   });
 </script>
+
+</body>
+</html>
